@@ -7,6 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>JenkinsWar Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -17,11 +18,15 @@
   </dependencies>
   <build>
     <finalName>JenkinsWar</finalName>
-  </build>
+   <plugins>
   <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-war-plugin</artifactId>
-    <version>3.8.6</version>
-</plugin>
+    <version>3.2.2</version>
+  </plugin>
+
+  </plugins>
+  </build>
+ 
 
 </project>
