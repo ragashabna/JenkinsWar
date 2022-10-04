@@ -1,7 +1,7 @@
 node{
 
    def tomcatWeb = 'C:\\apache-tomcat-10\\webapps'
-   def tomcatBin = 'C:\\apache-tomcat-10\\bin\\startup.bat'
+   def tomcatBin = 'C:\\apache-tomcat-10\\bin'
    def tomcatStatus = ''
    stage('SCM Checkout'){
      git 'https://github.com/ragashabna/JenkinsWar.git'
@@ -28,7 +28,7 @@ node{
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
-         bat "${tomcatBin}\\startup.bat"
+         bat "${tomcatBin}\\startup"
          sleep(time:100,unit:"SECONDS")
    }
 }
